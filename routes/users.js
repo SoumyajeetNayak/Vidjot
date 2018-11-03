@@ -19,7 +19,7 @@ router.post('/register', (req, res) => {
     let errors = [];
    
     if(req.body.password != req.body.password2){
-        errors.push({text:"password did not match"});
+        errors.push({text:"failed to authenticate the user"});
     }
     if(req.body.password.length < 4){
         errors.push({text:"Password must be at least 4 chars"});
